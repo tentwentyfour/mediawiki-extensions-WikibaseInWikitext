@@ -54,10 +54,13 @@ class Hooks {
 				foreach ( $referencesEntities as $id ) {
 					// TODO what if the entity is not on this local wiki?
 
-					$output .= '<li><a href="' .
-						SpecialPage::getTitleFor( 'EntityPage', $id )->getLinkURL() . '" >' .
-						$id .
-						'</li>';
+					$output .= sprintf(
+						'<li>
+							<a href="%s">%s</a>
+						</li>',
+						SpecialPage::getTitleFor( 'EntityPage', $id )->getLinkURL(),
+						$id
+					);
 				}
 				$output .= '</ul>';
 				$output .= PHP_EOL;
@@ -66,16 +69,22 @@ class Hooks {
 
 		if ( \ExtensionRegistry::getInstance()->isLoaded( 'SyntaxHighlight' ) ) {
 			$output .= $parser->recursiveTagParse(
-				'<syntaxhighlight lang="sparql" >' . $input . '</syntaxhighlight>'
+				sprintf(
+					'<syntaxhighlight lang="sparql" >%s</syntaxhighlight>',
+					$input
+				)
 			);
 		} else {
-			$output .= '<pre>' . $input . '</pre>';
+			$output .= sprintf( '<pre>%s</pre>', $input );
 		}
 		$output .= PHP_EOL;
 
 		if ( array_key_exists( 'tryit', $args ) ) {
-			$output .= '<a href="' . $sparqlUi . '#' .
-				htmlentities( rawurlencode( trim( $input ) ) ) . '">Try it!</a>';
+			$output .= sprintf(
+				'<a href="%s#%s" target="_blank">Try it!</a>',
+				$sparqlUi,
+				htmlentities( rawurlencode( trim( $input ) ) )
+			);
 			$output .= PHP_EOL;
 		}
 
