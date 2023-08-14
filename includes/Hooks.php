@@ -49,7 +49,10 @@ class Hooks {
 			sort( $referencesEntities );
 
 			if ( $referencesEntities ) {
-				$output .= '<p>The following query uses these:</p>';
+				$output .= sprintf(
+					'<p>%s</p>',
+					wfMessage('query_uses')->parse()
+				);
 				$output .= '<ul>';
 				foreach ( $referencesEntities as $id ) {
 					// TODO what if the entity is not on this local wiki?
@@ -81,9 +84,10 @@ class Hooks {
 
 		if ( array_key_exists( 'tryit', $args ) ) {
 			$output .= sprintf(
-				'<a href="%s#%s" target="_blank">Try it!</a>',
+				'<a href="%s#%s" target="_blank">%s</a>',
 				$sparqlUi,
-				htmlentities( rawurlencode( trim( $input ) ) )
+				htmlentities( rawurlencode( trim( $input ) ) ),
+				wfMessage('try_it')->parse()
 			);
 			$output .= PHP_EOL;
 		}

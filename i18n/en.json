@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Addshore"
+			"Addshore",
+			"TenTwentyFour"
 		]
 	},
-	"wikibaseInWikitext-desc": "Extension allowing use of <sparql> in wikitext for SPARQL queries."
+	"wikibaseInWikitext-desc": "Extension allowing use of <sparql> in wikitext for SPARQL queries.",
+	"query_uses": "The following query uses these:",
+	"try_it": "Try it!"
 }

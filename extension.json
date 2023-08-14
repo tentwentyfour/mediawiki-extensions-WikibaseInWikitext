@@ -1,7 +1,8 @@
 {
 	"name": "WikibaseInWikitext",
 	"author": [
-		"Addshore"
+		"Addshore",
+		"TenTwentyFour"
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:WikibaseInWikitext",
 	"descriptionmsg": "wikibaseInWikitext-desc",

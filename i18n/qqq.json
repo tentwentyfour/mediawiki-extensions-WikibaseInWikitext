@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Addshore"
+			"Addshore",
+			"TenTwentyFour"
 		]
 	},
-	"wikibaseInWikitext-desc": "{{desc|name=WikibaseInWikitext|url=https://www.mediawiki.org/wiki/Extension:WikibaseInWikitext}}"
+	"wikibaseInWikitext-desc": "{{desc|name=WikibaseInWikitext|url=https://www.mediawiki.org/wiki/Extension:WikibaseInWikitext}}",
+	"query_uses": "Introduction to a list of entities and properties used in the subsequent query.",
+	"try_it": "Call to action to run the query in a WDQS front-end."
 }

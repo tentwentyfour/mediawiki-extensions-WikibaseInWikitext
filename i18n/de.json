@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Addshore",
+			"TenTwentyFour"
+		]
+	},
+	"wikibaseInWikitext-desc": "Erweiterung um mit Hilfe von <sparql> Tags SPARQL Abfragen in Wikitext darzustellen.",
+	"query_uses": "Folgende Abfrage verwendet:",
+	"try_it": "Ausprobieren!"
+}
